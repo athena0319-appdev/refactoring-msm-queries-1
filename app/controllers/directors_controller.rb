@@ -23,7 +23,7 @@ class DirectorsController < ApplicationController
 
     @youngest = directors_by_dob_desc.at(0)
 
-    render({ :template => "director_templates/youngest" })
+    render({ :template => "director_templates/youngest.html.erb" })
   end
 
   def min_dob
@@ -34,6 +34,6 @@ class DirectorsController < ApplicationController
       
     @eldest = directors_by_dob_asc.at(0)
 
-    render({ :template => "director_templates/eldest" })
+    render({ :template => "director_templates/eldest.html.erb" })
   end
 end
